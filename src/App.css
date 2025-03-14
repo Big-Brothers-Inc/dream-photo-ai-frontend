@@ -1,0 +1,119 @@
+.App {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: var(--tg-theme-font-family, Arial, sans-serif);
+  color: var(--tg-theme-text-color, #222);
+  background-color: var(--tg-theme-bg-color, #fff);
+}
+
+.App-header {
+  margin-bottom: 20px;
+}
+
+.App-header h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.model-selection {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.photo-upload {
+  margin-bottom: 20px;
+}
+
+.upload-container {
+  border: 2px dashed var(--tg-theme-hint-color, #999);
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.upload-container:hover {
+  border-color: var(--tg-theme-button-color, #007bff);
+}
+
+.photo-preview {
+  margin: 15px 0;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.generate-button {
+  background-color: var(--tg-theme-button-color, #007bff);
+  color: var(--tg-theme-button-text-color, #fff);
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 10px 0;
+  width: 100%;
+}
+
+.generate-button:disabled {
+  background-color: var(--tg-theme-hint-color, #999);
+  cursor: not-allowed;
+}
+
+.results-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.result-image {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.result-image:hover {
+  transform: scale(1.05);
+}
+
+.error-message {
+  color: #d9534f;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: rgba(217, 83, 79, 0.1);
+  margin: 10px 0;
+}
+
+.success-message {
+  color: #5cb85c;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: rgba(92, 184, 92, 0.1);
+  margin: 10px 0;
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 600px) {
+  .App {
+    padding: 10px;
+  }
+  
+  .results-container {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  }
+} 
