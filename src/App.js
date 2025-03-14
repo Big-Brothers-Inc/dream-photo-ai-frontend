@@ -69,7 +69,7 @@ function App() {
   return (
     <div className="app">
       <header className="app-header">
-        <h1>Dream Photo AI</h1>
+        <h1>Dream Photo AI Studio</h1>
         <BalanceDisplay tokens={balance.tokens} referralTokens={balance.referralTokens} />
       </header>
       
